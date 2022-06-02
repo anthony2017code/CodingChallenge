@@ -1,0 +1,27 @@
+﻿@model ClarkCodingChallenge.Models.ContactRequestModel
+
+@{
+    ViewData["Title"] = "Contacts Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contacts List</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="GetContacts">
+            <div class="form-group">
+                <label class="control-label">LastName</label>
+                <input asp-for="LastName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">sort ascending(checked) or descending(uncheck)</label>
+                <input asp-for="SortAscending" checked="checked" type="checkbox" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Get Contacts" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
